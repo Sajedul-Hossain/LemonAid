@@ -1,0 +1,120 @@
+
+.home {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #111; /* base text color */
+  line-height: 1.5;
+  background: #ffffff;
+}
+
+/* Lemon hero: bright yellow gradient with black text for contrast */
+.hero {
+  background: linear-gradient(120deg, #fff59d 0%, #fff176 100%); /* lemon-yellow */
+  padding: 6rem 1rem;
+  text-align: center;
+  color: #000;
+}
+
+.heroInner { max-width: 900px; margin: 0 auto; }
+
+.title { font-size: 2.25rem; margin: 0 0 .5rem; color: #000; }
+.tagline { margin: 0 0 1.25rem; color: #111; }
+
+/* Strong CTA using black background and white text for high contrast */
+.cta {
+  display: inline-block;
+  background: #000; /* black */
+  color: #fff; /* white */
+  padding: .6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+.cta:hover { background: #fff; color: #000; border: 2px solid #000; }
+
+/* Header / navigation */
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(6px);
+  z-index: 50;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+.brand { display:flex; align-items:center; gap:.5rem; text-decoration:none; color:inherit; }
+.logo { width:48px; height:48px; object-fit:contain; border-radius:6px; }
+.siteName { font-weight:700; color:#000; }
+.nav a { margin-left:1rem; color:#000; text-decoration:none; font-weight:600; }
+
+@media (max-width:640px) {
+  .nav { display:none; }
+}
+
+/* Contact form */
+.contactSection { padding: 2.5rem 1rem; background: #fff; }
+.contactInner { max-width:760px; margin:0 auto; }
+.contactForm { display:grid; gap:0.75rem; }
+.formRow { display:flex; flex-direction:column; gap:0.5rem; }
+.formRow input, .formRow textarea { padding:0.6rem; border-radius:6px; border:1px solid rgba(0,0,0,0.12); }
+.formRow span { font-weight:600; }
+
+/* focus styles */
+a:focus, button:focus, input:focus, textarea:focus { outline:3px solid #000; outline-offset:3px; }
+
+/* Hamburger & mobile nav */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+.hamburger svg { display:block }
+
+@media (max-width:640px) {
+  .hamburger { display: block; }
+  .nav { display:none; }
+  .nav.open { display: block; position: absolute; right: 1rem; top: 64px; background: #fff; border-radius:8px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); padding: .75rem; animation: slideDown .18s ease; }
+  .nav.open a { display:block; padding:.5rem 0; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-6px); opacity: 0 }
+  to { transform: translateY(0); opacity: 1 }
+}
+
+.successText { color: #006400; margin-top: .5rem; font-weight:600 }
+.errorText { color: #9b1b1b; margin-top: .5rem; font-weight:600 }
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 1.25rem;
+  padding: 2.25rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feature {
+  background: #fff; /* keep cards white for contrast */
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.06);
+  color: #111;
+}
+
+.feature h3 { color: #000; }
+
+/* Black footer with white text */
+.siteFooter {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #000;
+  color: #fff;
+}
+
